@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.75rem;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    -webkit-user-drag: none;
+    -ms-user-drag: none;
+}
+
+/* IMAGE RESET*/
+img {
+    max-width: 150px;
+}
+
+body {
+    margin:0 auto;
+    max-width: 420px;
+    background:#e8e1d7;
+    position: relative;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper {
+    max-width: 100%;
+    position: relative;
+    padding-top: 1rem;
+}
+
+.wrapper img {
+    position: absolute;
+    right: 10%;
+}
+
+.inputs {
+    gap: 0.75rem;
+    margin-top: 3.65rem;
+    z-index:1;
+}
+
+#addEl {
+    width:85%;
+    border-radius: 20px;
+    padding: 0.4rem;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+#btnAdd {
+    border-radius: 50px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#btnAdd:active{
+    transform: scale(0.9);
+}
+
+
+.addedElements {
+    margin-top: 2rem;
+    padding: 0 1rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    max-width:100%;
+    line-height: 1.5rem;
+}
+
+.newEl {
+    display:inline-block;
+    border: 2.5px solid black;
+    border-radius: 10px;
+    padding: 0.5rem;
+    background: #bef570;
+    font-size: 1.25rem;
+    font-weight: 600;
+    position: relative;
+    max-inline-size: 100%;
+    overflow-wrap: break-word;
+    transition: 0.25s all ease;
+}
+
+.checkSelect {
+    transform: scale(2);
+    position: absolute;
+    top: -7.5px;
+    right: -5px;
+    -webkit-appearance: checkbox;
+    visibility: hidden;
+}
+
+.fa-xmark{
+    transform: scale(0.40);
+    position:absolute;
+    top: -35px;
+    right:-35px;
+    border: 5px solid black;
+    border-radius: 50%;
+    background: white;
+    padding: 0.25rem 0.4rem;
+}
+
+.delete {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #000;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh;
+}
+
+.delete span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.delete i {
+    transform: scale(0.6);
+    color: #fff;
+}
+
+.visible {
+    visibility: visible;
+}
+
+
+.askConfirmDeletion {
+    width: 95%;
+    left: 2.5%;
+    position: fixed;
+    border-radius: 20px;
+    bottom: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #000;
+}
+
+.askConfirmDeletion article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.askConfirmDeletion article:nth-of-type(1) {
+    padding: 0.5rem 0;
+}
+
+.askConfirmDeletion article:nth-of-type(2) {
+    padding: 0.25rem 1.5rem 0.75rem;
+}
+
+.askConfirmDeletion p {
+    font-size: 0.75rem;
+    text-align: center;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+}
+
+.askConfirmDeletion p:active {
+    background: grey;
+}
+
+#confirmEdit {
+    display: none;
+}
